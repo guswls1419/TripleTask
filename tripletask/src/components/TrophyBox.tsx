@@ -1,10 +1,9 @@
 import React from 'react';
 import styled,{keyframes} from 'styled-components';
-import triple2x from '../assets/triple2x.png';
 
 function TrophyBox() {
   return (
-    <TrophyBoxWrap>
+    <TrophyBoxWrap style={{ backgroundImage: `url(${require('../assets/triple2x.png')})` }}>
         2021년 12월 기준
     </TrophyBoxWrap>
   )
@@ -37,7 +36,6 @@ const TrophyBoxWrap = styled.div`
     height: 340px;
     position: absolute;
     top: 150px;    
-    background-image: url(${triple2x});
     background-repeat: no-repeat;
     background-size: 400px 338px;
     box-sizing: border-box;

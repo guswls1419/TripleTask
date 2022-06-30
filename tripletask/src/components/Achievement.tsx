@@ -1,17 +1,15 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
-import playStore2x from '../assets/playStore2x.png';
-import badgeApple4x from '../assets/badgeApple4x.png';
 
 function Achievement() {
   return (
     <AchievementWrap>
-        <GoogleContents>
+        <GoogleContents style={{ backgroundImage: `url(${require('../assets/playStore2x.png')})` }}>
             2018 구글 플레이스토어
             <br/>
             올해의 앱 최우수상 수상
         </GoogleContents>
-        <AppleContents>
+        <AppleContents style={{ backgroundImage: `url(${require('../assets/badgeApple4x.png')})` }}>
             2018 애플 앱스토어
             <br/>
             오늘의 여행앱 선정 
@@ -53,7 +51,6 @@ const GoogleContents = styled.div`
     padding : 5px 0px 5px 62px;
     margin-right : 37px;
     background-size: 54px 54px;
-    background-image: url(${playStore2x});
     background-repeat: no-repeat;
     font-size: 14px;
     font-family: sans-serif;
@@ -64,7 +61,6 @@ const GoogleContents = styled.div`
 const AppleContents = styled.div`
     padding : 5px 0px 5px 62px;
     background-size: 54px 54px;
-    background-image: url(${badgeApple4x});
     background-repeat: no-repeat;
     font-size: 14px;
     font-family: sans-serif;

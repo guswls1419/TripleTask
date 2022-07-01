@@ -1,19 +1,44 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled, {keyframes} from 'styled-components';
+import useDataCount from '../hooks/useDataCount';
 
 function NumberCount() {
+    const traveler = useDataCount(700)
+    const review = useDataCount(100)
+    const schedule = useDataCount(470)
+    // const [counter, setCounter] = React.useState(0);
+    // const [isRunning, setIsRunning] = React.useState(false);
+	// const countUp = () => {
+	// 	setCounter(prevCount => ++prevCount);
+	// };
+    // const end = 700;
+    
+    // if(counter !== end){
+    //     setIsRunning(true)
+    // }else{
+    //     setIsRunning(false)
+    // }
+
+    
+	// useDataCount(isRunning, end, countUp);
   return (
     <NumberCountWrap>
         <Contents>
-            <strong>700만 명</strong>
+            <strong>   
+                <span>{traveler}</span>만 명
+            </strong>
             의 여행자
         </Contents>
         <Contents>
-            <strong>100만 개</strong>
+            <strong>
+                <span>{review}</span>만 개
+            </strong>
             의 여행 리뷰
         </Contents>
         <Contents>
-            <strong>470만 개</strong>
+            <strong>
+                <span>{schedule}</span>만 개
+            </strong>
             의 여행 일정
         </Contents>
     </NumberCountWrap>

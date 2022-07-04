@@ -38,19 +38,15 @@ const Up = keyframes`
      }
   25% {
          opacity: 0.25;
-         transform: translateZ();
       }
   50% {
          opacity: 0.5;
-         transform: translateZ();
       }
   75% {
          opacity: 0.75;
-         transform: translateZ();
       }
   100% {
           opacity: 1;
-          transform: translateZ();
        }
 `;
 const NumberCountWrap = styled.div`
